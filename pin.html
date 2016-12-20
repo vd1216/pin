@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.pin{
+			width: 210px;
+			height: 350px;
+			margin: 100px auto;
+			position: relative;
+			background-color: #152734;
+			border-radius:150px 150px 0 0;
+		}
+		.pin:before, .pin:after{
+			content:'';
+			position: absolute;
+			width: 45px;
+			height: 85px;
+			background: #152734;
+			top:195px;
+			transform:rotate(32deg);
+		}
+		.pin:before{
+			left: -22px;
+			border-radius: 0 0 12px 36px;
+		}
+		.pin:after{
+			right: 40px;
+			border-radius: 0 0 23px 18px;
+		}
+
+		.body-pin{
+			position: absolute;
+			width: 150px;
+			height: 325px;
+			background: #fbf8e3;
+			border:2px solid #152734;
+			border-radius: 150px 150px 0 0 ;
+			bottom:0px;
+			left: -2px;
+		}
+		.body-pin:before,.body-pin:after{
+			content:'';
+			position: absolute;
+		}
+		.body-pin:before{
+			width: 208px;
+			height: 68px;
+			background: #fbf8e3;
+			border:2px solid #152734;
+			bottom:-35px;
+			left: -2px;
+			border-top: 0;
+			border-radius: 0 0 50% 50%;
+		}
+		.body-pin:after{
+			width: 60px;
+			height: 67px;
+			background: #152734;
+			bottom:-29px;
+			right: -60px;
+			border-radius: 0 0 60% 0;
+		}
+		.nose{
+			position: absolute;
+			z-index: 10;
+		}
+		.nose:after,.nose:before{
+			content:'';
+			position: absolute;
+			border: 15px solid transparent;
+			border-right: 90px solid #202323;
+			border-radius: 180px;
+			transform:rotate(-12deg);
+			left:-40px;
+			top:70px;
+		}
+		.nose:after{
+			top:72px;
+			left:-31px;
+			border: 12px solid transparent;
+			border-right: 82px solid #f2c255;
+		}
+		.eye{
+			width: 43px;
+			height: 43px;
+			border-radius: 50%;
+			background: #000;
+			position: absolute;
+			top:39px;
+		}
+		.eye:after{
+			content:'';
+			position: absolute;
+			background: #fefefe;
+			width: 20px;
+			height: 20px;
+			border-radius: 13px 8px;
+			top:3px;
+			left:6px;
+		}
+		.eye-l{
+			left: 1px;
+		}
+		.eye-r{
+			left: 75px;
+		}
+	</style>
+</head>
+<body>
+	<div class="pin">
+		<div class="body-pin">
+			<div class="nose"></div>
+			<div class=" eye eye-l"></div>
+			<div class="eye eye-r"></div>
+		</div>
+	</div>
+</body>
+</html>
